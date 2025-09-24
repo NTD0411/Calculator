@@ -1768,4 +1768,28 @@ is divided into following sections:
             </propertyset>
         </ant>
     </target>
+    <path id="classpath.test">
+    <fileset dir="lib">
+        <include name="*.jar"/>
+    </fileset>
+    <pathelement path="${build.classes.dir}"/>
+    <pathelement path="${build.test.classes.dir}"/>
+</path>
+
+<target name="compile-test" depends="compile">
+    <mkdir dir="${build.test.classes.dir}"/>
+    <javac srcdir="${test.src.dir}" destdir="${build.test.classes.dir}" classpathref="classpath.test"/>
+</target>
+
+<target name="test" depends="compile-test">
+    <junit printsummary="yes" haltonfailure="yes">
+        <classpath refid="classpath.test"/>
+        <batchtest todir="reports/junit">
+            <fileset dir="${test.src.dir}" includes="**/*Test.java"/>
+        </batchtest>
+        <formatter type="plain"/>
+        <formatter type="xml"/>
+    </junit>
+</target>
+
 </project>
