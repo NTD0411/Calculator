@@ -1,3 +1,5 @@
+[![CI with GitHub Actions using Ant and JUnit | © 2025 Entidi](https://github.com/NTD0411/Calculator/actions/workflows/ci-junit.yml/badge.svg)](https://github.com/NTD0411/Calculator/actions/workflows/ci-junit.yml)
+
 # 🧮 Calculator Project with JUnit \& CI Demo
 
 
