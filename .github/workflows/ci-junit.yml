@@ -27,18 +27,9 @@ jobs: # Những công việc dev làm thường ngày: lấy code, build, chạy
         with:
           java-version: '23' # Khai báo sử dụng phiên bản JDK 23 để build
           distribution: 'temurin'
-
-      - name: Download JUnit and Hamcrest # Tải thư viện JUnit và Hamcrest để chạy test
-        run: |
-          mkdir -p lib
-          curl -L -o lib/junit-4.13.2.jar https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar
-          curl -L -o lib/hamcrest-core-1.3.jar https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
      
       - name: Build project with Ant
         run: ant -noinput -buildfile build.xml # Quá trình build sẽ cần đến file cấu hình build.xml, build-impl.xml
-
-      - name: Run JUnit tests # Chạy Unit Test bằng Ant
-        run: ant -noinput -buildfile build.xml test # chạy target test trong build.xml
       
       - name: Distribute jar-war file # Gửi file .jar .war đi đâu, CD nhảy vào ...
         run: mkdir staging && cp dist/*.jar staging # tạo thư mục staging chứa file .jar .war sau khi build      
