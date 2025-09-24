@@ -11,7 +11,7 @@ This is a simple Java Calculator project that demonstrates:
 
 
 
-\## ✨ Features
+## ✨ Features
 
 * ➕ Addition  
 * ➖ Subtraction  
@@ -23,9 +23,9 @@ This is a simple Java Calculator project that demonstrates:
 
 
 
-\## 🚀 Getting Started
+## 🚀 Getting Started
 
 
 
-\### © 2025 Entidi
+### © 2025 Entidi
 
