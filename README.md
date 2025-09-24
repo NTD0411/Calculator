@@ -1,4 +1,4 @@
-\# 🧮 Calculator Project with JUnit \& CI Demo
+# 🧮 Calculator Project with JUnit \& CI Demo
 
 
 
