@@ -1775,5 +1775,10 @@ is divided into following sections:
     <pathelement path="${build.classes.dir}"/>
     <pathelement path="${build.test.classes.dir}"/>
 </path>
+<path id="javac.test.classpath">
+    <pathelement path="${build.classes.dir}"/>
+    <path path="${libs.junit_4.classpath}"/>
+    <path path="${libs.hamcrest.classpath}"/>
+</path>
 
 </project>
